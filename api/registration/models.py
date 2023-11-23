@@ -5,7 +5,6 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 
-
 def generate_unique_random_id(queryset, field_name):
     while True:
         random_id = random.randint(10000, 99999)
@@ -14,9 +13,9 @@ def generate_unique_random_id(queryset, field_name):
 
 class CandidateDetails(models.Model):
     full_name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     contact = models.CharField(max_length=13)
-    candidate_id = models.IntegerField(unique=True, blank=True, null=True)
+    candidate_id = models.IntegerField(primary_key=True)
     
     def __str__(self):
         return self.full_name
@@ -31,9 +30,9 @@ def assign_candidate_id(sender, instance, **kwargs):
 
 class InterviewerDetails(models.Model):
     full_name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     contact = models.CharField(max_length=13)
-    interviewer_id = models.IntegerField(unique=True, blank=True, null=True)
+    interviewer_id = models.IntegerField(primary_key=True)
 
     def __str__(self):
         return self.full_name
@@ -44,3 +43,5 @@ def assign_interviewer_id(sender, instance, **kwargs):
         queryset = sender.objects
         field_name = 'interviewer_id'
         instance.interviewer_id = generate_unique_random_id(queryset, field_name)
+
+
