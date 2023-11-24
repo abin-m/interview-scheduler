@@ -1,0 +1,657 @@
+{
+	"info": {
+		"_postman_id": "5e91a02b-afc0-43b8-a3ab-5103cc98181e",
+		"name": "API Documentation for Interview Scheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25138767"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"item": [
+				{
+					"name": "Candidate API's",
+					"item": [
+						{
+							"name": "All candidates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/candidates/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"candidates",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET candidate with ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/candidate/76053/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"candidate",
+										"76053",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Candidate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"full_name\": \"Namith Prasad\",\n    \"email\": \"namith@example.com\",\n    \"contact\": \"9864565289\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/candidates/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"candidates",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a candidate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"full_name\": \"Amal V Nadh\",\n    \"email\": \"amal.nadh@example.com\",\n    \"contact\": \"9864565289\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/candidate/72008/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"candidate",
+										"72008",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a candidate",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"full_name\": \"Amal V Nadh\",\n    \"email\": \"amal.nadh@example.com\",\n    \"contact\": \"9864565289\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/candidate/72008/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"candidate",
+										"72008",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Interviewer API's",
+					"item": [
+						{
+							"name": "All interviewers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/interviewers/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"interviewers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Interviewer with ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/interviewer/81659/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"interviewer",
+										"81659",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create interviewer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"full_name\": \"Bharath\",\n    \"email\": \"bharath@example.com\",\n    \"contact\": \"9188292137\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/interviewers/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"interviewers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Interviewer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"full_name\": \"Amal V Nadh\",\n    \"email\": \"amal.nadh@example.com\",\n    \"contact\": \"9864565289\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/interviewer/85654/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"interviewer",
+										"85654",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Interviewer",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"full_name\": \"Krishna\",\n    \"email\": \"krishna@example.com\",\n    \"contact\": \"9188292137\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/interviewer/85654/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"interviewer",
+										"85654",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Availability API",
+					"item": [
+						{
+							"name": "All candidates Availability",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/availability/candidate/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"availability",
+										"candidate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "candidates Availability",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"candidate_id\": 76053,\n    \"interview_code\": \"72245\", \n    \"start_time\": \"09:00 AM\",\n    \"end_time\": \"03:00 PM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/availability/candidate/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"availability",
+										"candidate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Interviewer Availability",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"candidate_id\": 83945,\n    \"interview_code\": \"00955\",  // Replace with the appropriate interview_date ID from your data\n    \"start_time\": \"09:00 AM\",\n    \"end_time\": \"12:00 PM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/availability/interviewer/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"availability",
+										"interviewer",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Interviewer Availability",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"interviewer_id\": 56661,\n    \"interview_code\": \"08108\",  // Replace with the appropriate interview_date ID from your data\n    \"start_time\": \"12:00 PM\",\n    \"end_time\": \"03:00 PM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/availability/interviewer/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"availability",
+										"interviewer",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Interview",
+			"item": [
+				{
+					"name": "Create Interview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"interview_date\": \"2023-12-05\",\n    \"role\": \"Django Backend developer\", \n    \"candidate_id\": 76053, // Candidate ID\n    \"interviewer_id\": 93717 // Interviewer ID\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/interview/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"interview",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Interview",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"interview_date\": \"2023-12-05\",\n        \"role\": \"Software Engineer L1\",\n        \"interview_code\": \"08108\",\n        \"candidate_id\": 83945,\n        \"interviewer_id\": 56661\n        \n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/interview/08108/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"interview",
+								"08108",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Interview",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"interview_date\": \"2023-11-30\",\n    \"role\": \"Software Engineer-traine\", \n    \"candidate_id\": 13923, \n    \"interviewer_id\": 81659 //\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/interview/29381/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"interview",
+								"29381",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Interviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"interview_date\": \"2023-12-05\",\n        \"role\": \"Software Engineer-trainee\",\n        \"interview_code\": \"08108\",\n        \"candidate_id\": 83945,\n        \"interviewer_id\": 81659,\n        \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/interview/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"interview",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scheduler",
+			"item": [
+				{
+					"name": "Available slotes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"interview_code\": \"08108\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/scheduler/find-slots/83945/56661/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"scheduler",
+								"find-slots",
+								"83945",
+								"56661",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

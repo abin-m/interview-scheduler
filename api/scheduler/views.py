@@ -14,7 +14,7 @@ def find_available_time_slots(candidate_start, candidate_end, interviewer_start,
     cache_key = f"availability_{candidate_start}_{candidate_end}_{interviewer_start}_{interviewer_end}"
     cached_slots = cache.get(cache_key)
     if cached_slots:
-        # print("used a slot from cache")
+        print("used a slot from cache")
         return cached_slots
 
     try:
@@ -33,19 +33,24 @@ def find_available_time_slots(candidate_start, candidate_end, interviewer_start,
         available_time_slots = []
         current_time = earliest_start
         start_slot = None
+
         while current_time <= latest_end:
-            if (current_time >= interviewer_start and
-                    current_time + timedelta(hours=1) <= interviewer_end and
-                    current_time >= candidate_start and
-                    current_time + timedelta(hours=1) <= candidate_end):
+            if (
+                current_time >= interviewer_start
+                and current_time + timedelta(hours=1) <= interviewer_end
+                and current_time >= candidate_start
+                and current_time + timedelta(hours=1) <= candidate_end
+            ):
                 if start_slot is None:
                     start_slot = current_time
+
                 next_slot = current_time + timedelta(hours=1)
+
                 if next_slot > latest_end:
                     available_time_slots.append(f"{start_slot.strftime('%I:%M %p')} , {current_time.strftime('%I:%M %p')}")
                     break
                 elif next_slot not in available_time_slots:
-                    available_time_slots.append(f"{start_slot.strftime('%I:%M %p')} , {current_time.strftime('%I:%M %p')}")
+                    available_time_slots.append(f"{start_slot.strftime('%I:%M %p')} , {next_slot.strftime('%I:%M %p')}")
                     start_slot = None
 
             current_time += timedelta(hours=1)
@@ -86,4 +91,3 @@ def schedule_interview(request, candidate_id, interviewer_id):
 # @api_view(['POST'])
 # def slot_confirmation(request):
 #     interview_code = request.data.get('interview_code')
-
