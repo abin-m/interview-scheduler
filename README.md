@@ -1,8 +1,7 @@
 # Optimizing Interview Scheduling for HR Professionals
 
-Managing interview schedules can be a challenging task for HR personnel. Coordinating between candidates and interviewers while considering everyone's availability and preferences often leads to complexities.
+Streamlining interview scheduling is a complex task for HR teams. Utilizing Django, Django REST framework, and Redis for caching becomes essential for an efficient solution. These frameworks, coupled with dedicated scheduling software, significantly enhance scheduling capabilities, simplifying the management of interview schedules by integrating technology effectively.
 
-To streamline the interview scheduling process, a comprehensive solution is required. Leveraging technology and efficient tools, such as Django and Django REST framework, alongside Redis for caching, becomes crucial. Dedicated scheduling software and strategic utilization of these frameworks allow for enhanced scheduling capabilities and improved management of interview schedules.
 
 ## Mind Map
 
@@ -210,4 +209,5 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     "available_slots": "['12:00 PM , 01:00 PM', '01:00 PM , 02:00 PM', '02:00 PM , 03:00 PM']"
     }
     
-> Note: I have provided the rest of the API operations in the Postman collection. Please check that for more
+> Note: I have provided the rest of the API operations in the Postman collection.
+> This is in a initial stage, if you found any issues in the system design please let me know.
