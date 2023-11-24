@@ -10,8 +10,14 @@ class CandidateAvailability(models.Model):
     start_time = models.CharField(max_length=50)
     end_time = models.CharField(max_length=50)
 
+    class Meta:
+        unique_together = ('candidate_id', 'interview_code', 'start_time', 'end_time')
+
 class InterviewerAvailability(models.Model):
     interviewer_id = models.ForeignKey(InterviewerDetails, on_delete=models.CASCADE)
     interview_code = models.ForeignKey(Interview, on_delete=models.CASCADE)
     start_time = models.CharField(max_length=50)
     end_time = models.CharField(max_length=50)
+
+    class Meta:
+        unique_together = ('interviewer_id', 'interview_code', 'start_time', 'end_time')

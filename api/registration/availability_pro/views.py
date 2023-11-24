@@ -23,7 +23,16 @@ def candidate_availability(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+@api_view(['DELETE'])
+def delete_candidate_availability(request, interview_code):
+    try:
+        candidate_availability = CandidateAvailability.objects.get(interview_code=interview_code)
+    except CandidateAvailability.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
 
+    candidate_availability.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
 
 # Interviewer Availability views
 @api_view(['GET', 'POST'])
@@ -40,3 +49,12 @@ def interviewer_availability(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['DELETE'])
+def delete_interviewer_availability(request, interview_code):
+    try:
+        interviewer_availability = InterviewerAvailability.objects.get(interview_code=interview_code)
+    except InterviewerAvailability.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    interviewer_availability.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
