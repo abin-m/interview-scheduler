@@ -32,7 +32,7 @@ To streamline the interview scheduling process, a comprehensive solution is requ
 
 # API documentation
 
- As a first step we need to create the interviewer and candidate,
+## As a first step we need to create the interviewer and candidate,
 
 ### Create a candidate
 
@@ -49,7 +49,6 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     "email": "namith@example.com",
     "contact": "9864565289"
   }
-
 
 ### Response
    
@@ -78,7 +77,6 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     "contact": "9188292137"
   }
 
-
 ### Response
    
     Status Code: 201 Created
@@ -90,7 +88,7 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     "contact": "9188292137"
     }
 
-Now the most important part is here we need to create An Interview with Candidate and interviewer
+## Now the most important part is here we need to create An Interview with Candidate and interviewer
 
 ### Create  Interview
 
@@ -110,7 +108,6 @@ Now the most important part is here we need to create An Interview with Candidat
   }
 
 
-
 ### Response
    
     Status Code: 201 Created
@@ -124,7 +121,7 @@ Now the most important part is here we need to create An Interview with Candidat
     "interview_time_slot": "NULL"
     }
 
-Now we need to obtain the availabilty of Interviewer and Candidate
+## Now we need to obtain the availabilty of Interviewer and Candidate
 
 ### Candidate Availability 
 
@@ -186,5 +183,31 @@ Now we need to obtain the availabilty of Interviewer and Candidate
     "end_time": "03:00 PM"
     }
 
-    
+## Now we need to obtain the available slots
+
+### Get Availabile Slots
+
+### Request
+
+- **Method:** POST
+- **URL:** `http://127.0.0.1:8000/api/scheduler/find-slots/76053/93717/`
+- **Headers:** No specific headers are required.
+- **Body:**
+
+  ```
+  {
+    "interview_code": "72245"
+  }
+
+
+
+### Response
+   
+    Status Code: 201 Created
+    Response Body:
+    {
+    "interview_code": "72245",
+    "available_slots": "['12:00 PM , 12:00 PM', '01:00 PM , 01:00 PM', '02:00 PM , 02:00 PM']"
+    }
+
       
