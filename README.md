@@ -208,5 +208,5 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
     "available_slots": "['12:00 PM , 01:00 PM', '01:00 PM , 02:00 PM', '02:00 PM , 03:00 PM']"
     }
     
-> Note: I have provided the rest of the API operations in the Postman collection.
-> This is in a initial stage, if you found any issues in the system design please let me know.
+> Note : I have included the remaining API operations in the Postman collection.
+> As this is in the initial stage, if you discover any issues in the system design, please let me know.
