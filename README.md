@@ -31,7 +31,7 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
 
 # API documentation
 
-## As a first step we need to create the interviewer and candidate,
+> ## As a first step we need to create the interviewer and candidate,
 
 ### Create a candidate
 
@@ -87,7 +87,7 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
     "contact": "9188292137"
     }
 
-### create An Interview with the details of Candidate and interviewer
+> ### create An Interview with the details of Candidate and interviewer
 
 ### Create  Interview
 
@@ -119,7 +119,7 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
     "interview_time_slot": "NULL"
     }
 
-### Now we need to obtain the availabilty of the Interviewer and Candidate
+> ### Now we need to obtain the availabilty of the Interviewer and Candidate
 
 ### Candidate Availability 
 
@@ -181,7 +181,7 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
     "end_time": "03:00 PM"
     }
 
-## Now we need to obtain the available slots
+> ## Now we need to obtain the available slots
 
 ### Get Availabile Slots
 
