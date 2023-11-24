@@ -106,7 +106,6 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
     "interviewer_id": 93717 // Interviewer ID
   }
 
-
 ### Response
    
     Status Code: 201 Created
@@ -164,7 +163,7 @@ Streamlining interview scheduling is a complex task for HR teams. Utilizing Djan
   ```
   {
     "interviewer_id": 93717,
-    "interview_code": "72245",  // Replace with the appropriate interview_date ID from your data
+    "interview_code": "72245",
     "start_time": "12:00 PM",
     "end_time": "03:00 PM"
   }
