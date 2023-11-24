@@ -88,7 +88,7 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     "contact": "9188292137"
     }
 
-## Now the most important part is here we need to create An Interview with Candidate and interviewer
+### create An Interview with the details of Candidate and interviewer
 
 ### Create  Interview
 
@@ -121,7 +121,7 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     "interview_time_slot": "NULL"
     }
 
-## Now we need to obtain the availabilty of Interviewer and Candidate
+### Now we need to obtain the availabilty of the Interviewer and Candidate
 
 ### Candidate Availability 
 
@@ -207,7 +207,7 @@ To streamline the interview scheduling process, a comprehensive solution is requ
     Response Body:
     {
     "interview_code": "72245",
-    "available_slots": "['12:00 PM , 12:00 PM', '01:00 PM , 01:00 PM', '02:00 PM , 02:00 PM']"
+    "available_slots": "['12:00 PM , 01:00 PM', '01:00 PM , 02:00 PM', '02:00 PM , 03:00 PM']"
     }
-
-      
+    
+> Note: I have provided the rest of the API operations in the Postman collection. Please check that for more
